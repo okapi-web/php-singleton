@@ -1,0 +1,28 @@
+{
+    "name": "okapi/singleton",
+    "description": "PHP Singleton is a PHP library that allows you to create singleton classes with a trait.",
+    "version": "1.0.0",
+    "type": "library",
+    "homepage": "https://github.com/okapi-web/php-singleton",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WalterWoshid",
+            "email": "wotschel.valentin@googlemail.com",
+            "homepage": "https://github.com/WalterWoshid"
+        }
+    ],
+    "keywords": [
+        "singleton",
+        "trait",
+        "php"
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Okapi\\Singleton\\": "src/"
+        }
+    }
+}
