@@ -16,6 +16,7 @@ trait Singleton
      * Singleton instance.
      *
      * @var self
+     * @noinspection PhpDocFieldTypeMismatchInspection
      */
     private static self $instance;
 
@@ -37,6 +38,7 @@ trait Singleton
      * Get the singleton instance.
      *
      * @return self
+     * @noinspection PhpDocSignatureInspection
      */
     public static function getInstance(): self
     {
