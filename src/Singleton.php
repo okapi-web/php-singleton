@@ -15,10 +15,10 @@ trait Singleton
     /**
      * Singleton instance.
      *
-     * @var self
+     * @var self|null
      * @noinspection PhpDocFieldTypeMismatchInspection
      */
-    private static self $instance;
+    private static ?self $instance = null;
 
     /**
      * Whether the instance has been initialized.
