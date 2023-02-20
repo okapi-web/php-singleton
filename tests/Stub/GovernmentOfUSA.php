@@ -12,7 +12,7 @@ class GovernmentOfUSA
     {
         $instance = self::getInstance();
 
-        $instance->ensureNotAlreadyInitialized();
+        $instance->ensureNotInitialized();
 
         $instance->setInitialized();
     }
@@ -21,6 +21,6 @@ class GovernmentOfUSA
     {
         $instance = self::getInstance();
 
-        $instance->ensureAlreadyInitialized();
+        $instance->ensureInitialized();
     }
 }

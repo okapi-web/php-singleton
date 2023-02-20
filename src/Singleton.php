@@ -74,7 +74,7 @@ trait Singleton
      *
      * @return void
      */
-    protected function ensureNotAlreadyInitialized(): void
+    protected function ensureNotInitialized(): void
     {
         if (self::isInitialized()) {
             throw new AlreadyInitializedException(get_called_class());
@@ -86,7 +86,7 @@ trait Singleton
      *
      * @return void
      */
-    protected function ensureAlreadyInitialized(): void
+    protected function ensureInitialized(): void
     {
         if (!self::isInitialized()) {
             throw new NotInitializedException(get_called_class());

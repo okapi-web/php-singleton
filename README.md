@@ -87,7 +87,7 @@ class GovernmentOfUSA
         // For non-static just use $this
         
         // Make sure the instance is only registered once
-        $instance->ensureNotAlreadyInitialized();
+        $instance->ensureNotInitialized();
         
         // Do something
         // ...
@@ -102,7 +102,7 @@ class GovernmentOfUSA
     public function takeOverTheWorld(): void
     {
         // Make sure the instance is initialized
-        $this->ensureAlreadyInitialized();
+        $this->ensureInitialized();
         
         // Do something
         // ...
