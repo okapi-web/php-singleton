@@ -2,14 +2,12 @@
 
 namespace Okapi\Singleton\Exceptions;
 
-use RuntimeException;
-
 /**
  * # Already Initialized Exception
  *
  * This exception is thrown when a singleton instance is already initialized.
  */
-class AlreadyInitializedException extends RuntimeException
+class AlreadyInitializedException extends SingletonException
 {
     /**
      * AlreadyInitializedException constructor.
