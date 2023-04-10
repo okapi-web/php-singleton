@@ -37,16 +37,15 @@ trait Singleton
     /**
      * Get the singleton instance.
      *
-     * @return self
-     * @noinspection PhpDocSignatureInspection
+     * @return static
      */
-    public static function getInstance(): self
+    public static function getInstance(): static
     {
-        if (!isset(self::$instance)) {
-            self::$instance = new static();
+        if (!isset(static::$instance)) {
+            static::$instance = new static();
         }
 
-        return self::$instance;
+        return static::$instance;
     }
 
     /**
@@ -56,7 +55,7 @@ trait Singleton
      */
     public static function isInitialized(): bool
     {
-        return self::getInstance()->initialized;
+        return static::getInstance()->initialized;
     }
 
     /**
@@ -76,7 +75,7 @@ trait Singleton
      */
     protected function ensureNotInitialized(): void
     {
-        if (self::isInitialized()) {
+        if (static::isInitialized()) {
             throw new AlreadyInitializedException(get_called_class());
         }
     }
@@ -88,7 +87,7 @@ trait Singleton
      */
     protected function ensureInitialized(): void
     {
-        if (!self::isInitialized()) {
+        if (!static::isInitialized()) {
             throw new NotInitializedException(get_called_class());
         }
     }
